@@ -35,7 +35,9 @@ export class FirstSpecComponent implements OnInit{
     }
     countryName:any='';
     getName:any='';
+    abcd:any="";
     getCountryNames():any{
+        this.abcd = "ia m filled";
      this.firstService.getCountryNames().subscribe((item)=>{
         this.countryName = item[0].name;
         console.log(item[0].name);

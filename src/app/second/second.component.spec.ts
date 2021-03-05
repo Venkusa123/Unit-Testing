@@ -55,14 +55,15 @@ describe("Second Spec describe function started",()=>{
         secondComponent.name = 'sree rama';
         fixture.detectChanges();
         expect(fixture.debugElement.nativeElement.querySelector('.h5class').innerText).toBe('sree rama')
-    })
+    });
     it("input check from second compoent",()=>{
         fixture2.detectChanges();
-        let k=fixture2.debugElement.nativeElement.query(By.css('h3'));
-        expect(parseInt(k.nativeElement.innerText)).toBe('saii');
-    })
+        let k=fixture2.debugElement.query(By.css('h3'));
+        expect(k.nativeElement.innerText).toBe('charan');
+    });
     it("3rd input and output",()=>{
         fixture3.detectChanges();
-        expect(fixture3.debugElement.nativeElement.querySelector('h3').innerText).toBe('sai')
-    })
+        let m=fixture3.debugElement.query(By.css('h3'));
+        expect(m.nativeElement.innerText).toBe('saiii')
+    });
 })
