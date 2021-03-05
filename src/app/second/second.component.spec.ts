@@ -63,6 +63,6 @@ describe("Second Spec describe function started",()=>{
     })
     it("3rd input and output",()=>{
         fixture3.detectChanges();
-        expect(fixture3.debugElement.nativeElement.querySelector('h3').innerText).toBe('saiii')
+        expect(fixture3.debugElement.nativeElement.querySelector('h3').innerText).toBe('sai')
     })
 })
