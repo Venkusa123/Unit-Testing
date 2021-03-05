@@ -61,8 +61,4 @@ describe("Second Spec describe function started",()=>{
         let k=fixture2.debugElement.nativeElement.query(By.css('h3'));
         expect(parseInt(k.nativeElement.innerText)).toBe('saiii');
     })
-    it("3rd input and output",()=>{
-        fixture3.detectChanges();
-        expect(fixture3.debugElement.nativeElement.querySelector('h3').innerText).toBe('saiii')
-    })
 })
