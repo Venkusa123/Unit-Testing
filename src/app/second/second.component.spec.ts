@@ -59,6 +59,6 @@ describe("Second Spec describe function started",()=>{
     it("input check from second compoent",()=>{
         fixture2.detectChanges();
         let k=fixture2.debugElement.nativeElement.query(By.css('h3'));
-        expect(parseInt(k.nativeElement.innerText)).toBe('saiii');
+        expect(parseInt(k.nativeElement.innerText)).toBe('saii');
     })
 })
