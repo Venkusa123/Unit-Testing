@@ -1,0 +1,13 @@
+<h1>Hello i am from second component html file</h1>
+<div>
+    <button id="btnAddClick" class="btn -md btn-primary" (click)="addClick()">Add Click</button>
+    <button id="btnRemoveClick" class="btn-md btn-danger" (click)="removeClick()">Remove Click</button>
+</div>
+<div>
+    <h2>{{countClicks}}</h2>
+</div>
+<h3>{{name}}</h3>
+<h5 [ngClass]="{'firstClass':checkNgClass == true,'secondClass':checkNgClass == false}" class="h5class">{{name}}</h5>
+<div>
+    <p *ngFor="let i of displayEvenNumbers">{{i}}</p>
+</div>

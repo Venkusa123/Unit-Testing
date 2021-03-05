@@ -1,0 +1,31 @@
+<!-- <h1>First Spec Component Html File started</h1> -->
+<button class="btn btn-md" (click)="getData()">Click</button>
+<h1 class="specClass">{{salarySlip}}</h1>
+<p>asdfasdfasf</p>
+<div>
+    <button class="btn btn-md btn-primary" id="id1" (click)="getCountryNames()">
+        Get Country Names
+    </button>
+<div *ngIf="enableDiv" id="countryId" [color]='color' AppHighLight>
+    dirty
+</div>
+<h5 class="h5class">{{getName}}</h5>
+{{countryName}}    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col1 col-md-4 col-sm-4">
+            <form action="">
+                <div class="firstElement">
+                    <label for="nameid">Enter Name:</label>
+                    <input type="text" name="name" class="cls1" id="nameid">
+                </div>
+                <div class="secondElement">
+                    <label for="nameid">Enter Name:</label>
+                    <input type="text" name="name" class="cls1" id="nameid">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-second-spec [name]="name" (sendName)="sendName($event)"></app-second-spec>

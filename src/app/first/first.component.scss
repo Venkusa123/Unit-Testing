@@ -1,0 +1,10 @@
+.col1::before{
+    content: "before text";
+}
+*{
+    cursor: pointer;
+}
+.firstElement input[type="text"]{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
