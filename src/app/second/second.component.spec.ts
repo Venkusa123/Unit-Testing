@@ -2,6 +2,7 @@ import { componentFactoryName } from "@angular/compiler";
 import { Component, DebugElement } from "@angular/core";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing"
 import { By } from "@angular/platform-browser";
+import { SecondDirective } from "../custom-directives/second-directive";
 import { SecondSpecComponent } from "./second.component"
 
 @Component({
@@ -23,10 +24,11 @@ describe("Second Spec describe function started",()=>{
     let fixture2:ComponentFixture<TestComponent>;
     let fixture:ComponentFixture<SecondSpecComponent>;
     let de:DebugElement;
+    let secondDirective:SecondDirective;
 
     beforeEach(async(()=>{
         TestBed.configureTestingModule({
-            declarations : [SecondSpecComponent,TestComponent,SsssComponent]
+            declarations : [SecondSpecComponent,TestComponent,SsssComponent,SecondDirective]
         }).compileComponents
     }))   
     beforeEach(()=>{
@@ -66,4 +68,17 @@ describe("Second Spec describe function started",()=>{
         let m=fixture3.debugElement.query(By.css('h3'));
         expect(m.nativeElement.innerText).toBe('saiii')
     });
+    it('test for 2nd directive',()=>{
+        let a = fixture.debugElement.query(By.css('#secIdDirective'));
+        // secondComponent.addClick();
+        // let b=fixture.debugElement.query(By.css('#btnAddClick'));
+        // b.triggerEventHandler('click',{})
+        // fixture.detectChanges();
+        a.triggerEventHandler('mouseenter',{});
+        fixture.detectChanges();
+        expect(a.nativeElement.style.color).toBe('orange');
+        a.triggerEventHandler('mouseout',{});
+        fixture.detectChanges();
+        expect(a.nativeElement.style.color).toBe('yellow')
+    })
 })

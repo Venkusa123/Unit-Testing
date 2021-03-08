@@ -25,8 +25,8 @@ export class AppHighLightDirective implements OnInit{
     @HostListener('mouseout') mouseout(){
         this.color = 'green';
         this.el.nativeElement.style.backgroundColor = this.color;
-        this.el.nativeElement.innerHTML = "charanaa"
+        // this.el.nativeElement.innerHTML = "charanaa";
         this.el.nativeElement.style.color = 'yellow';
-        this.appService.bs.next("green");
+        // this.appService.bs.next("green");
     }    
 }

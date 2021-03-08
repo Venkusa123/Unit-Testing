@@ -8,3 +8,21 @@
     background-color: black;
     color: rgb(255, 255, 255);
 }
+#id1:hover{
+    animation-name: btnShake;
+    animation-duration: 10s;
+}
+@keyframes btnShake{
+    0%{
+        transform: translate(-20px,50px);
+    }
+    // 50%{
+    //     transform: translate(50px,50px);
+    // }
+    // 80%{
+    //     transform: translate(80px,80px);
+    // }
+    100%{
+        transform: skew(10deg,120deg);
+    }
+}

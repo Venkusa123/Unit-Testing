@@ -14,11 +14,13 @@ export class SecondSpecComponent implements OnInit{
     constructor(){
 
     }
+    hiddenId:boolean=true;
     checkNgClass:boolean=false;
     @Input('name') name;
     @Output() sendName = new EventEmitter();
     countClicks:any=0;
     addClick(){
+        this.hiddenId =false
         this.checkNgClass=true
         this.countClicks= this.countClicks+1;
         this.sendName.emit('Send Charan'+' '+this.countClicks);

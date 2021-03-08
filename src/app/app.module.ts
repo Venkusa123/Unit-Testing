@@ -9,10 +9,11 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routingmodule';
 import { AppHighLightDirective } from './custom-directives/highlight-directive';
 import { AppService } from './app.service';
+import { SecondDirective } from './custom-directives/second-directive';
 
 @NgModule({
   declarations: [
-    AppComponent,FirstSpecComponent,SecondSpecComponent,AppHighLightDirective
+    AppComponent,FirstSpecComponent,SecondSpecComponent,AppHighLightDirective,SecondDirective
   ],
   imports: [
     BrowserModule,HttpClientModule,AppRoutingModule
